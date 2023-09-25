@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Formulario de Elementos</title>
+</head>
+
+<body>
+    <h1>Formulario de Elementos</h1>
+    <form action="procesar_formulario.php" method="post">
+        <label for="nombre_elemento">Nombre del Elemento:</label>
+        <input type="text" id="nombre_elemento" name="nombre_elemento" required /><br /><br />
+
+        <label for="descripcion_elemento">Descripción del Elemento:</label><br />
+        <textarea  name="descripcion_elemento" rows="4" cols="50"
+            required></textarea><br /><br />
+
+        <label for="numero_serie">Nª Serie</label>
+        <input type="text"  name="numero_serie" required /><br /><br />
+
+        <label>Estado:</label><br />
+        <input type="radio"  name="estado" value="activo" required />
+        <label for="estado_activo">Activo</label><br />
+        <input type="radio"  name="estado" value="inactivo" />
+        <label for="estado_inactivo">Inactivo</label><br /><br />
+
+        <label>Prioridad:</label><br />
+        <input type="radio" name="prioridad" value="alta" required />
+        <label for="prioridad_alta">Alta</label><br />
+        <input type="radio"  name="prioridad" value="media" />
+        <label for="prioridad_media">Media</label><br />
+        <input type="radio"  name="prioridad" value="baja" />
+        <label for="prioridad_baja">Baja</label><br /><br />
+
+        <input type="submit" value="Enviar" />
+    </form>
+</body>
+
+</html>
