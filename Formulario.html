@@ -2,12 +2,24 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de Elementos</title>
 </head>
-
+<header>
+    <a href="Formulario.html">Formulario</a>
+    <br>
+    <a href="Tabla.html">Tabla</a>
+    <br>
+    <a href="Sistema.html">Sistema</a>
+    <br>
+    <a href="Caracteristicas.html">Caracteristicas</a>
+    <br>
+    <a href="estado-tabla.html">Tabla-Caracteristica</a>
+</header>
 <body>
     <h1>Formulario de Elementos</h1>
-    <form action="procesar_formulario.php" method="post">
+    <form action="#" method="POST">
         <label for="nombre_elemento">Nombre del Elemento:</label>
         <input type="text" id="nombre_elemento" name="nombre_elemento" required /><br /><br />
 
@@ -32,7 +44,7 @@
         <input type="radio"  name="prioridad" value="baja" />
         <label for="prioridad_baja">Baja</label><br /><br />
 
-        <input type="submit" value="Enviar" />
+        <input type="button" value="Enviar" />
     </form>
 </body>
 
