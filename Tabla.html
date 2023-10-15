@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabla de Elementos</title>
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
 </head>
 <header>
     <a href="Formulario.html">Formulario</a>
@@ -23,53 +24,26 @@
 
     <form method="post" action="#">
         <h1>Tabla de Elementos</h1>
+        <input type="text" id="filtrar" >
+        
+        
+        
         <table border="3">
-
             <tr>
-               <th> Nombre del Elemento</th>
+                
+                <th>Nombre del Elemento</th>
                 <th>Descripción del Elemento</th>
                 <th>Número de Serie</th>
                 <th>Estado</th>
                 <th>Prioridad</th>
+                <th>Acciones</th>
             </tr>
-            <tr>
-                <td>.</td>
-                <td>.</td>
-                <td>.</td>
-                <td>.</td>
-                <td>.</td>
-            </tr>
-            <tr>
-                <td>.</td>
-                <td>.</td>
-                <td>.</td>
-                <td>.</td>
-                <td>.</td>
-            </tr>
-            <tr>
-                <td>.</td>
-                <td>.</td>
-                <td>.</td>
-                <td>.</td>
-                <td>.</td>
-            </tr>
-            <tr>
-                <td>.</td>
-                <td>.</td>
-                <td>.</td>
-                <td>.</td>
-                <td>.</td>
-            </tr>
-            <tr>
-                <td>.</td>
-                <td>.</td>
-                <td>.</td>
-                <td>.</td>
-                <td>.</td>
-            </tr>
-
+            <tbody id="tablaBody">
+              
+                 
+            </tbody>
         </table>
-    </form>
+        </form>
 </body>
-
+<script src="JS/Configuracion.js" ></script>
 </html>
