@@ -68,21 +68,21 @@ function filtrarTabla() {
         const celdas = fila.querySelectorAll("td");
         const nombre = celdas[0].textContent.toLowerCase();
         const descripcion = celdas[1].textContent.toLowerCase();
-        if(filtro.length > 3){
+        if (filtro.length > 3) {
 
-      
-        if (nombre.includes(filtro) || descripcion.includes(filtro)) {
-            fila.classList.remove("oculto");
-            fila.classList.add("color");
-        } else {
-            fila.classList.add("oculto");
-            fila.classList.remove("color");
 
+            if (nombre.includes(filtro) || descripcion.includes(filtro)) {
+                fila.classList.remove("oculto");
+                fila.classList.add("color");
+            } else {
+                fila.classList.add("oculto");
+                fila.classList.remove("color");
+
+            }
+        } else if (filtro.length == 0) {
+            fila.classList.remove("oculto", "color");
         }
-    }else if(filtro.length == 0){
-      fila.classList.remove("oculto","color");
-    }
-    
+
     });
 }
 
