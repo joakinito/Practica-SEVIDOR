@@ -37,7 +37,9 @@ const valores = [
 
 // Función para agregar elementos del array y el botón eliminar
 function agregarElementosATabla(valores) {
+
     for (const valor of valores) {
+        console.log (valor);
         const fila = document.createElement("tr");
         for (const clave in valor) {
             const celda = document.createElement("td");
@@ -68,7 +70,7 @@ function filtrarTabla() {
         const celdas = fila.querySelectorAll("td");
         const nombre = celdas[0].textContent.toLowerCase();
         const descripcion = celdas[1].textContent.toLowerCase();
-        if (filtro.length > 3) {
+        if (filtro.length >= 3) {
 
 
             if (nombre.includes(filtro) || descripcion.includes(filtro)) {
