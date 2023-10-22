@@ -13,10 +13,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     // Almacena los datos del elemento en un archivo de texto sin sobrescribir el contenido
     try{
-    $archivo = 'C:\Users\joaki\Desktop\html treball\Practica-SEVIDOR-HTML\WS\Formulario.txt';
+    $archivo = 'Formulario.txt';
     if (file_exists($archivo)) {
         $datosExistentes = file_get_contents($archivo);
-        $datosJSON = json_decode($datosExistentes, true);
+        $datosJSON = json_decode($datosExistentes);
         $datosJSON[] = $element;
         file_put_contents($archivo, json_encode($datosJSON));
     }

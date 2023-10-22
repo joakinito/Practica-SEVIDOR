@@ -1,1 +1,1 @@
-[{"nombre_elemento":"d","descripcion_elemento":"d","numero_serie":"d","estado":"activo","prioridad":"alta"}]
+[{"nombre_elemento":"s","descripcion_elemento":"s","numero_serie":"s","estado":"activo","prioridad":"alta"}]
