@@ -1,5 +1,8 @@
 <?php
-require_once('Element.php');
+/**
+ * @author joaki 
+ */
+
 require_once('interfaces/IToJson.php');
 class Element implements IToJson
 {
