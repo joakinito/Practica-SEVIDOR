@@ -6,7 +6,7 @@
 
 
 require_once('../conexion/Conexion.php');
-require_once('../Consulta\Consulta.php');
+
 class Consulta
 {
     private $conexion;
