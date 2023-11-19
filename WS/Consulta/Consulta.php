@@ -36,10 +36,9 @@ class Consulta
                 $consulta = $this->conexion->prepare("DELETE FROM elementos WHERE id = :id");
                 $consulta->bindParam(':id', $id, PDO::PARAM_INT);
                 $consulta->execute();
-                $idInsertado = $this->conexion->lastInsertId();
-                $obtenerElemento = json_decode($this->obtenerElementos($idInsertado), true);
+                $obtenerElemento = json_decode($elementoExistente, true);
                 $datosElemento = $obtenerElemento['data'];
-                return $this->enviarRespuesta(true, "Elemento eliminado correctamente", $obtenerElemento);
+                return $this->enviarRespuesta(true, "Elemento eliminado correctamente", $datosElemento);
             } else {
                 return $this->enviarRespuesta(false, "No has añadido ninguna id que eliminar", null);
             }
@@ -63,13 +62,15 @@ class Consulta
                 if ($resultados == null) {
                     return $this->enviarRespuesta(false, "Id no encontrada en la base de datos", null);
                 }
+                return $this->enviarRespuesta(true, "Estas en la id: $id", $resultados);
+
             } else {
                 $consulta = $this->conexion->prepare("SELECT * FROM elementos");
                 $consulta->execute();
                 $resultados = $consulta->fetchAll(PDO::FETCH_ASSOC);
                 return $this->enviarRespuesta(true, "base de datos completa", $resultados);
             }
-            return $this->enviarRespuesta(true, "Estas en la id: $id", $resultados);
+
         } catch (Exception $e) {
             return $this->enviarRespuesta(false, "Error en la consulta", null);
         }
@@ -110,10 +111,10 @@ class Consulta
         try {
 
 
-            $elementoExistente = $this->obtenerElementos($id);
             if ($id === null) {
                 return $this->enviarRespuesta(false, "ID no válido", null);
             }
+            $elementoExistente = $this->obtenerElementos($id);
 
             $actualizaciones = [];
             $parametros = [':id' => $id];
